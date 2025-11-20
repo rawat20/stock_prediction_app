@@ -1,29 +1,29 @@
-stock_prediction_app/
-│
-├── app/
-│   ├── app.py                      # Streamlit app
-│   ├── model_utils.py              # Model loading and prediction utilities
-│   ├── preprocessing.py            # Data fetching and preprocessing
-│   ├── models/
-│   │   ├── TSLA/
-│   │   │   ├── best_StockLSTM.pth  # Pre-trained LSTM weights for TSLA
-│   │   │   ├── best_StockGRU.pth   # Pre-trained GRU weights for TSLA
-│   │   ├── AAPL/
-│   │   │   ├── best_StockLSTM.pth
-│   │   │   ├── best_StockGRU.pth
-│   │   ├── AMZN/
-│   │   │   ├── best_StockLSTM.pth
-│   │   │   ├── best_StockGRU.pth
-│   │   ├── GOOGL/
-│   │   │   ├── best_StockLSTM.pth
-│   │   │   ├── best_StockGRU.pth
-│   └── data/
-│       └── live from yfinance
-│
-├── notebooks/
-│   └── Project_arawat3.ipynb                  # Model training notebook
-│
-├── requirements.txt
-└── README.md
+# Stock Prediction App — Deep Learning Forecasts (LSTM & GRU)
 
-// all references are mentioned in final project report
+**Deep learning–based stock price prediction using LSTM and GRU (PyTorch) with feature engineering and a Streamlit app for live forecasting.**
+
+---
+
+## 🔎 Project overview
+This project implements and compares recurrent neural networks (LSTM and GRU) to forecast short-term stock price trends using historical daily data from Yahoo Finance. It includes:
+- Feature engineering: SMA_10, SMA_50, RSI.  
+- Sequence windowing (20 time steps).  
+- Models trained with PyTorch using Huber Loss.  
+- Streamlit web app for live prediction and visualization.
+
+See the full project report and presentation (PDFs included in this repository):  
+- **Project Report** — `project_report_arawat3.pdf`. :contentReference[oaicite:5]{index=5}  
+
+---
+
+## 🔧 Tech stack
+- Python, PyTorch, NumPy, pandas, scikit-learn. :contentReference[oaicite:7]{index=7}  
+- Streamlit for the interactive demo. :contentReference[oaicite:8]{index=8}
+
+---
+
+## 🚀 Quickstart (local)
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/stock_prediction_app.git
+cd stock_prediction_app
